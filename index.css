@@ -75,7 +75,7 @@ section p {
 
 /* Section background imgs */
 section#home {
-  background: url("./images/background.jpg") no-repeat center center/cover;
+  background: url("./images/burnout_background.gif") no-repeat center center/cover;
 }
 section#motorcycles {
   background: url("./images/motorcycle_section.jpg") no-repeat center center/cover;
