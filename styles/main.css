@@ -75,17 +75,17 @@ section p {
 
 /* Section background imgs */
 section#home {
-  background: url("./images/burnout_background.gif") no-repeat center center/cover;
+  background: url("../images/burnout_background.gif") no-repeat center center/cover;
 }
 section#motorcycles {
-  background: url("./images/motorcycle_section.jpg") no-repeat center center/cover;
+  background: url("../images/motorcycle_section.jpg") no-repeat center center/cover;
 }
 section#mods {
-  background: url("./images/scheduling.svg") no-repeat center center/cover;
+  background: url("../images/scheduling.svg") no-repeat center center/cover;
 }
 section#lookbook {
-  background: url("./images/lookbook.jpg") no-repeat center center/cover;
+  background: url("../images/lookbook.jpg") no-repeat center center/cover;
 }
 section#about {
-  background: url("./images/about_section.png") no-repeat center center/cover;
+  background: url("../images/about_section.png") no-repeat center center/cover;
 }
