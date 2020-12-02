@@ -1,19 +1,10 @@
 /****DOM ELEMENT***/
 const bikes = document.querySelector('#motorcycle-div')
-
-
-
-
-
-
-
+const submitBtn = document.querySelector("#submit-btn")
+const form = document.querySelector('#appointment-form')
 
 /****RENDERS***/
-// render one motorcycle here //
 
-
-
-// ----------- //
 const renderAllMotorcycles = cycleObj => {
   cycleObj.forEach(bike => {
     const img = document.createElement('img')
@@ -27,13 +18,38 @@ const renderAllMotorcycles = cycleObj => {
 }
 
 
-/****EVENTS***/
-// on mouse over
-// hover event displays info for a single motorcycle  //
-bikes.addEventListener('mouseover', event => {
-  event.target.style.color = 'white';
+const appointmentSubmission = event => {
   console.log(event.target)
-})
+  event.preventDefault()
+  const id = event.target.dataset.id
+
+  const modObj = {
+    id: id,
+    day: event.target.day.value,
+    // time: event.target.time.value
+  }
+
+  fetch('http://localhost:3000/api/v1/modification_requests', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify(modObj)
+  })
+    .then(r => r.json())
+    .then(data => {
+      console.log('Success:', data)
+    })
+    .catch((error) => {
+      console.error('Error:', error)
+    });
+  
+  event.target.reset()
+}
+
+/****EVENTS***/
+form.addEventListener('submit', appointmentSubmission)
 
 
 
