@@ -12,25 +12,29 @@ const renderAllMotorcycles = cycleObj => {
     img.className = 'img-bikes'
     img.src = bike.imageUrl
     img.alt = `${bike.maker} ${bike.name}`
-    
+    // form.dataset.id = bike.id
     bikes.append(img)
   })
 }
 
+// render appointments here
+const renderAppointments = () => {
+  
+}
 
+//-----------------------------------//
 const appointmentSubmission = event => {
-  // console.log(event.target)
   event.preventDefault()
   // const id = event.target.dataset.id
 
   const modObj = {
+    motorcycle_id: 1,
     day: form.querySelector('#day').value,
-    time: form.querySelector('#time').value,
-    description: form.querySelector('#description').value
+    time: form.querySelector('#time').value
   }
 
-  console.log(modObj)
-    fetch('http://localhost:3000/api/v1/modification_requests', {
+
+    fetch("http://localhost:3000/api/v1/modification_requests", {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -42,9 +46,6 @@ const appointmentSubmission = event => {
     .then(data => {
       console.log('Success:', data)
     })
-    // .catch((error) => {
-    //   console.error('Error:', error)
-    // });
   
   event.target.reset()
 }
