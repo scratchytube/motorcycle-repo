@@ -28,11 +28,11 @@ const appointmentSubmission = event => {
   // const id = event.target.dataset.id
 
   const modObj = {
-    motorcycle_id: 1,
+    motorcycle_id: 2,
     day: form.querySelector('#day').value,
-    time: form.querySelector('#time').value
+    time: form.querySelector('#time-input').value
   }
-
+  // console.log(modObj)
 
     fetch("http://localhost:3000/api/v1/modification_requests", {
     method: 'POST',
