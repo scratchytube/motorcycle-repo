@@ -2,9 +2,12 @@
   margin: 0;
   padding: 0;
 }
+* {
+  box-sizing:border-box;
+}
 
 body {
-  font-family: 'Nerko One', cursive;
+  font-family: 'Nerko One';
   background: #333;
   color: #fff;
   line-height: 1.6;
@@ -17,6 +20,7 @@ body {
 .container {
   width: 100%;
   height: 100%;
+
   /* CSS Smooth Scroll */
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -66,6 +70,7 @@ section {
 }
 
 section h1 {
+  font-family: bignoodletitling;
   font-size: 4rem;
 }
 
@@ -78,14 +83,73 @@ section#home {
   background: url("../images/burnout_background.gif") no-repeat center center/cover;
 }
 section#motorcycles {
-  background: url("../images/motorcycle_section.jpg") no-repeat center center/cover;
+  background-color: black;
+  /* background: url("../images/orangemotorcycle.jpg") no-repeat center center/cover; */
 }
 section#mods {
-  background: url("../images/scheduling.svg") no-repeat center center/cover;
+  background-color: rgb(0, 0, 0);
+  /* background: url("../images/scheduling.svg") no-repeat center center/cover; */
 }
 section#lookbook {
-  background: url("../images/lookbook.jpg") no-repeat center center/cover;
+  background-color: lightgreen;
+  /* background: url("../images/lookbook.jpg") no-repeat center center/cover; */
 }
 section#about {
-  background: url("../images/about_section.png") no-repeat center center/cover;
+  background-color: red;
+  /* background: url("../images/about_section.png") no-repeat center center/cover; */
+}
+
+div#motorcycle-div {
+  width: 1700px;
+  overflow: scroll;
+  height: 80%;
+  scroll-snap-type: y mandatory;
+}
+
+img.img-bikes {
+  height: 100%;
+  width: 100%;
+  scroll-snap-align: center;
+}
+
+
+/* APPOINTMENT FORM */
+form#appointment-form {
+  height: 50rem;
+  width: 80rem;
+}
+
+label {
+  font-size: 25px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 15px;
+  border-radius: 15px;
+  border: 0;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+  height: 500px;
+}
+
+button {
+  /* remove default behavior */
+  appearance:none;
+  -webkit-appearance:none;
+
+  padding: 10px;
+  border: none;
+  background-color:#15b946;
+  color:#fff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  width: 50%;
 }
