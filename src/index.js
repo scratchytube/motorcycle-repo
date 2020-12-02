@@ -7,7 +7,19 @@ const username = document.querySelector('#username')
 
 
 
+<<<<<<< HEAD
 /****RENDERS***/
+=======
+const renderLookbook = looksArray => {
+  looksArray.forEach(look => {
+    const img = document.createElement('img')
+    img.src = look.img
+    img.className = 'img-bikes'
+    img.alt = look.name 
+  })
+}
+
+>>>>>>> brian
 const renderAllMotorcycles = cycleObj => {
   cycleObj.forEach(bike => {
     const img = document.createElement('img')
@@ -70,6 +82,12 @@ form.addEventListener('submit', appointmentSubmission)
 
 /****FETCH***/
 
+const getLookbook = () => {
+  fetch('http://localhost:3000/api/v1/lookbooks')
+  .then(r => r.json())
+  .then(renderLookbook)
+}
+
 const getMotorcycles = () => {
     fetch('http://localhost:3000/api/v1/motorcycles')
     .then(r => r.json())
@@ -77,4 +95,5 @@ const getMotorcycles = () => {
 }
 
 getMotorcycles()
+getLookbook()
 
