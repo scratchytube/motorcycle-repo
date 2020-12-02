@@ -19,31 +19,32 @@ const renderAllMotorcycles = cycleObj => {
 
 
 const appointmentSubmission = event => {
-  console.log(event.target)
+  // console.log(event.target)
   event.preventDefault()
-  const id = event.target.dataset.id
+  // const id = event.target.dataset.id
 
   const modObj = {
-    id: id,
-    day: event.target.day.value,
-    // time: event.target.time.value
+    day: form.querySelector('#day').value,
+    time: form.querySelector('#time').value,
+    description: form.querySelector('#description').value
   }
 
-  fetch('http://localhost:3000/api/v1/modification_requests', {
+  console.log(modObj)
+    fetch('http://localhost:3000/api/v1/modification_requests', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     },
     body: JSON.stringify(modObj)
-  })
+    })
     .then(r => r.json())
     .then(data => {
       console.log('Success:', data)
     })
-    .catch((error) => {
-      console.error('Error:', error)
-    });
+    // .catch((error) => {
+    //   console.error('Error:', error)
+    // });
   
   event.target.reset()
 }
