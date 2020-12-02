@@ -155,12 +155,27 @@ button#submit-btn {
 
   padding: 10px;
   border: none;
-  background-color:#21c4da;
+  background-color:#21be43;
   color:#fff;
   font-size: 15px;
   font-weight: 600;
   border-radius: 5px;
   width: 50%;
+}
+button#submit-btn2 {
+  /* remove default behavior */
+  appearance:none;
+  -webkit-appearance:none;
+
+  padding: 10px;
+  border: none;
+  background-color:#21be43;
+  color:#fff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  width: 50%;
+  margin-left: 100px;
 }
 
 /************* MODAL MENUS**************/
@@ -183,7 +198,7 @@ button#submit-btn {
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 1rem 1.5rem;
-  width: 24rem;
+  width: 30rem;
   border-radius: 0.5rem;
 }
 .close-button {
@@ -205,5 +220,10 @@ button#submit-btn {
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 .modal-text {
+  color: black;
+}
+
+.modal-label {
+  font-family: bignoodletitling;
   color: black;
 }

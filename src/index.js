@@ -2,9 +2,12 @@
 const bikes = document.querySelector('#motorcycle-div')
 const submitBtn = document.querySelector("#submit-btn")
 const form = document.querySelector('#appointment-form')
+const username = document.querySelector('#username')
+
+
+
 
 /****RENDERS***/
-
 const renderAllMotorcycles = cycleObj => {
   cycleObj.forEach(bike => {
     const img = document.createElement('img')
@@ -17,9 +20,19 @@ const renderAllMotorcycles = cycleObj => {
   })
 }
 
+// fake sign in form
+// once user presses enter the 'Account text in the header should 
+// change to what the user inputs: checking for input value
+
+
+
+
 // render appointments here
 const renderAppointments = () => {
-  
+  // create appointment tags & attributes
+  // give attributes value(s)
+  // append data
+  // call function in appointmentSubmission's fetch
 }
 
 //-----------------------------------//
@@ -28,7 +41,7 @@ const appointmentSubmission = event => {
   // const id = event.target.dataset.id
 
   const modObj = {
-    motorcycle_id: 2,
+    motorcycle_id: 2, // just hard coding it for now! How do we get the id to be dynamic here ? 
     day: form.querySelector('#day').value,
     time: form.querySelector('#time-input').value
   }
