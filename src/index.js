@@ -3,9 +3,9 @@ const bikes = document.querySelector('#motorcycle-div')
 const submitBtn = document.querySelector("#submit-btn")
 const form = document.querySelector('#appointment-form')
 const username = document.querySelector('#username')
-const accountBtn = document.querySelector("#account-btn")
+const accountForm = document.querySelector("#account-form")
 const modalSubmitBtn = document.querySelector("#submit-btn2")
-
+const acctText = document.querySelector("#acct-text")
 
 const renderLookbook = looksArray => {
   looksArray.forEach(look => {
@@ -71,15 +71,21 @@ const appointmentSubmission = event => {
 const accountSubmit = event => {
   event.preventDefault()
 
-  console.log(event.target)
+  const username = accountForm.querySelector("#username").value
+  console.log(username)
 
+  if (username.value = "") {
+    acctText = username.value
+  }
+  
+  username.value = document.querySelector("#acct-text")
+  event.target.reset()
 }
 
 
 /****EVENTS***/
 form.addEventListener('submit', appointmentSubmission)
-accountBtn.addEventListener("click", accountSubmit)
-// modalSubmitBtn.addEventListener("click", accountSubmit)
+accountForm.addEventListener('submit', accountSubmit)
 
 /****FETCH***/
 
