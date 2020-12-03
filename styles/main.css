@@ -94,6 +94,10 @@ section#lookbook {
   background-color: lightgreen;
   /* background: url("../images/lookbook.jpg") no-repeat center center/cover; */
 }
+section#my-appointments {
+  background-color: black;
+  /* background: url("../images/about_section.png") no-repeat center center/cover; */
+}
 section#about {
   background-color: red;
   /* background: url("../images/about_section.png") no-repeat center center/cover; */
@@ -177,6 +181,21 @@ button#submit-btn2 {
   width: 50%;
   margin-top: 10px;
   margin-left: 100px;
+}
+button#update-appt {
+  /* remove default behavior */
+  appearance:none;
+  -webkit-appearance:none;
+
+  padding: 10px;
+  border: none;
+  background-color:#21be43;
+  color:#fff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  width: 50%;
+  margin-top: 15px;
 }
 
 /************* MODAL MENUS**************/

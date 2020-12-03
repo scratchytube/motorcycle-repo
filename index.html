@@ -11,14 +11,6 @@
     <script src="./src/modal.js" defer></script>
 </head>
 <body>
-  
-  <!-- Thinking about putting this in a modal -->
-  <!-- <div class="topbar">
-    <h1 class='title'>Cycle <br><span>Heaven</span></h1>
-    <a href="">Account</a>
-    <a class="appointment" href="">My appointments</a>
-  </div> -->
-  
   <div class="container">
     <nav class="navbar">
       <ul>
@@ -26,19 +18,10 @@
         <li><a href="#motorcycles">Motorcycles</a></li>
         <li><a href="#mods">Appointment (mods)</a></li>
         <li><a href="#lookbook">Lookbook</a></li>
+        <li><a href="#my-appointments">My Appointments</a></li>
         <li><a href="#about">About Us</a></li>
 
-  <!-- CANT SEEM TO GET TWO MODALS OPEN, WILL DO MORE RESEARCH TONIGHT-->
-
-        <!-- <li><a href="#my-appointments" class="trigger">My Appointments</a></li>
-        <div id="my-appointments" class="modal">
-          <div class="modal-content">
-            <span class="close-button">x</span>
-            <h1 class="modal-text">test text</h1>
-          </div>
-        </div> -->
-
-        <li><a id="acct-text" href="#account" class="trigger">Account</a></li>
+        <li><a id="acct-btn" href="#account" class="trigger">Account</a></li>
         <div id="account" class="modal">
           <div class="modal-content">
             <span class="close-button">x</span>
@@ -95,7 +78,6 @@
             <br><br>
           <textarea placeholder="What would you like to modify? " id='description'></textarea>
 
-          <!-- horizontal scroll with imgs of bikes the customer wants their modded motorcycle to resemble -->
           <br><br>
           <button id="submit-btn" type="submit">Submit</button>
         </form>
@@ -103,6 +85,19 @@
     </section>
     <section id="lookbook">
       <h1>LOOKBOOK</h1>
+    </section>
+    <section id="my-appointments">
+      <h1>MY APPOINTMENTS</h1><br>
+      <div>
+        <form id="appointment-div">
+          <span class="close-button">x</span>
+          <label for="">Date of appointment: </label>
+          <input id="my-appt-date" type="text" placeholder="">
+          <label for="">Company: </label>
+          <input id="cycle-input" type="text" placeholder="Cycle Heaven"><br>
+          <button id="update-appt">Update Appointment</button>
+        </form>
+      </div>
     </section>
     <section id="about">
       <h1>ABOUT</h1>
