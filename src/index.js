@@ -11,7 +11,7 @@ const apptDate = document.querySelector("#my-appt-date")
 const updateApptBtn = document.querySelector("#update-appt")
 const closeBtn = document.querySelector(".close-button")
 const companyField = document.querySelector("#cycle-input")
-
+const test = document.querySelector('#test')
 
 
 // const renderLookbook = looksArray => {
@@ -38,10 +38,17 @@ const renderAllMotorcycles = cycleObj => {
 
 const renderAppointments = (apptObj) => {
   apptObj.forEach(appt => {
-    apptDate.placeholder = `${appt.day} ${appt.time}`
-    // companyField.textContent = appt.company //=> maybe add company attribute to db
-    // append data
-    // appointments.append(apptDate)
+    const form = document.createElement('form')
+    form.innerHTML = `
+      <br><br><br>
+      <span class="close-button">x</span>
+      <label for="">Date of appointment: </label>
+      <input id="my-appt-date" type="text" placeholder="${appt.day} ${appt.time}">
+      <label for="">Company: </label>
+      <input id="cycle-input" type="text" placeholder="Cycle Heaven"><br>
+      <button id="update-appt">Update Appointment</button>
+    `
+    test.append(form)
   })
 }
 
@@ -82,10 +89,10 @@ const accountSubmit = event => {
   event.preventDefault()
 
   const username = accountForm.querySelector("#username").value
-  console.log(username)
-
+  // console.log(username)
+  // username.value = document.querySelector("#acct-text")
+  acctBtn.textContent = `Hi ${username}!`
   
-  username.value = document.querySelector("#acct-text")
   event.target.reset()
 }
 

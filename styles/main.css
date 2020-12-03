@@ -83,11 +83,11 @@ section#home {
   background: url("../images/burnout_background.gif") no-repeat center center/cover
 }
 section#motorcycles {
-  background-color: black;
+  background-color: rgb(20, 20, 20);
   /* background: url("../images/orangemotorcycle.jpg") no-repeat center center/cover; */
 }
 section#mods {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(20, 20, 20);
   /* background: url("../images/scheduling.svg") no-repeat center center/cover; */
 }
 section#lookbook {
@@ -95,7 +95,7 @@ section#lookbook {
   /* background: url("../images/lookbook.jpg") no-repeat center center/cover; */
 }
 section#my-appointments {
-  background-color: black;
+  background-color: rgb(20, 20, 20);
   /* background: url("../images/about_section.png") no-repeat center center/cover; */
 }
 section#about {
@@ -230,7 +230,7 @@ button#update-appt {
   border-radius: 0.25rem;
   background-color: lightgray;
 }
-.close-button:hover {
+.close-button {
   background-color: red;
 }
 .show-modal {
@@ -246,4 +246,11 @@ button#update-appt {
 .modal-label {
   font-family: bignoodletitling;
   color: black;
+}
+
+/********** MY APPOINTMENTS **********/
+#test {
+  width: 1000px;
+  overflow: scroll;
+  height: 70%;
 }
