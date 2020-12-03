@@ -152,6 +152,7 @@ textarea {
   height: 500px;
 }
 
+/******************* BUTTONS *********************/ 
 button#submit-btn {
   /* remove default behavior */
   appearance:none;
@@ -173,7 +174,7 @@ button#submit-btn2 {
 
   padding: 10px;
   border: none;
-  background-color:#21be43;
+  background-color:#5c5b5b;
   color:#fff;
   font-size: 15px;
   font-weight: 600;
