@@ -3,23 +3,19 @@ const bikes = document.querySelector('#motorcycle-div')
 const submitBtn = document.querySelector("#submit-btn")
 const form = document.querySelector('#appointment-form')
 const username = document.querySelector('#username')
+const accountBtn = document.querySelector("#account-btn")
+const modalSubmitBtn = document.querySelector("#submit-btn2")
 
 
-
-
-<<<<<<< HEAD
-/****RENDERS***/
-=======
 const renderLookbook = looksArray => {
   looksArray.forEach(look => {
     const img = document.createElement('img')
     img.src = look.img
-    img.className = 'img-bikes'
+    // img.className = 'img-bikes'
     img.alt = look.name 
   })
 }
 
->>>>>>> brian
 const renderAllMotorcycles = cycleObj => {
   cycleObj.forEach(bike => {
     const img = document.createElement('img')
@@ -31,12 +27,6 @@ const renderAllMotorcycles = cycleObj => {
     bikes.append(img)
   })
 }
-
-// fake sign in form
-// once user presses enter the 'Account text in the header should 
-// change to what the user inputs: checking for input value
-
-
 
 
 // render appointments here
@@ -75,10 +65,21 @@ const appointmentSubmission = event => {
   event.target.reset()
 }
 
+// fake sign in form
+// once user presses enter the 'Account text in the header should 
+// change to what the user inputs: checking for input value
+const accountSubmit = event => {
+  event.preventDefault()
+
+  console.log(event.target)
+
+}
+
+
 /****EVENTS***/
 form.addEventListener('submit', appointmentSubmission)
-
-
+accountBtn.addEventListener("click", accountSubmit)
+// modalSubmitBtn.addEventListener("click", accountSubmit)
 
 /****FETCH***/
 
