@@ -11,7 +11,7 @@ const apptDate = document.querySelector("#my-appt-date")
 const updateApptBtn = document.querySelector("#update-appt")
 const closeBtn = document.querySelector(".close-button")
 const companyField = document.querySelector("#cycle-input")
-const test = document.querySelector('#test')
+const apptsContainer = document.querySelector('#user-appts-div')
 
 
 // const renderLookbook = looksArray => {
@@ -38,8 +38,9 @@ const renderAllMotorcycles = cycleObj => {
 
 const renderAppointments = (apptObj) => {
   apptObj.forEach(appt => {
-    const form = document.createElement('form')
-    form.innerHTML = `
+    const myApptForm = document.createElement('form')
+    myApptForm.dataset.id = appt.id
+    myApptForm.innerHTML = `
       <br><br><br>
       <span class="close-button">x</span>
       <label for="">Date of appointment: </label>
@@ -48,7 +49,7 @@ const renderAppointments = (apptObj) => {
       <input id="cycle-input" type="text" placeholder="Cycle Heaven"><br>
       <button id="update-appt">Update Appointment</button>
     `
-    test.append(form)
+    apptsContainer.append(myApptForm)
   })
 }
 
@@ -96,11 +97,23 @@ const accountSubmit = event => {
   event.target.reset()
 }
 
+// DELETE FUNCTION HERE //
+// const deleteAppt = event => {
+//   console.log(event.target)
+
+//   id = event.target.dataset.id
+//   const form = event.target.closest('form')
+
+//   fetch(`http://localhost:3000/api/v1/modification_requests/${id}`, {
+//     method: 'DELETE',
+//   })
+//   form.remove()
+// }
 
 /****EVENTS***/
 form.addEventListener('submit', appointmentSubmission)
 accountForm.addEventListener('submit', accountSubmit)
-
+// myApptForm.addEventListener('click', deleteAppt)
 
 /****FETCH***/
 

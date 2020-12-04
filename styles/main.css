@@ -1,8 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-}
-* {
   box-sizing:border-box;
 }
 
@@ -99,7 +97,7 @@ section#my-appointments {
   /* background: url("../images/about_section.png") no-repeat center center/cover; */
 }
 section#about {
-  background-color: red;
+  background-color: lightblue;
   /* background: url("../images/about_section.png") no-repeat center center/cover; */
 }
 
@@ -231,7 +229,7 @@ button#update-appt {
   border-radius: 0.25rem;
   background-color: lightgray;
 }
-.close-button {
+.close-button:hover {
   background-color: red;
 }
 .show-modal {
@@ -250,8 +248,9 @@ button#update-appt {
 }
 
 /********** MY APPOINTMENTS **********/
-#test {
-  width: 1000px;
+#user-appts-div {
+  padding: 1rem 1.5rem;
+  width: 850px;
   overflow: scroll;
   height: 70%;
 }
