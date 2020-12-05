@@ -13,6 +13,7 @@ const companyField = document.querySelector("#cycle-input")
 const apptsContainer = document.querySelector('#user-appts-div')
 const lookbookDiv = document.querySelector("#lookbook-div")
 
+
 const renderAllMotorcycles = cycleObj => {
   cycleObj.forEach(bike => {
     const img = document.createElement('img')
@@ -96,16 +97,12 @@ const accountSubmit = event => {
   event.preventDefault()
 
   const username = accountForm.querySelector("#username").value
-  // console.log(username)
-  // username.value = document.querySelector("#acct-text")
   acctBtn.textContent = `Hi ${username}!`
 
-  const modalClass = document.querySelector('.modal-content')
-  // const closeBtn = modalCLass.querySelector('.span')
-  //closeBtn.addEventListener('')
-
-  
   event.target.reset()
+  
+ 
+  
 }
 
 // DELETE FUNCTION HERE //
@@ -157,6 +154,9 @@ const deleteAppt = event => {
 form.addEventListener('submit', appointmentSubmission)
 accountForm.addEventListener('submit', accountSubmit)
 apptsContainer.addEventListener('click', deleteAppt)
+// accountForm.submit = event => {
+//   accountForm.hide()
+// }
 
 
 
