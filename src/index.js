@@ -34,11 +34,11 @@ const renderAppointments = apptObj => {
     myApptForm.innerHTML = `
       <br><br><br>
       <span data-id=${appt.id} class="close-button">x</span>
+      <label for="">Company: </label>
+      <input id="cycle-input" type="text" placeholder="Cycle Heaven" disabled><br>
       <label for="">Date of appointment: </label>
       <input id="my-appt-day" type="text" placeholder="${appt.day}">
       <input id="my-appt-time" type="text" placeholder="${appt.time}">
-      <label for="">Company: </label>
-      <input id="cycle-input" type="text" placeholder="Cycle Heaven" disabled><br>
       <button data-action="update" id="update-appt">Update Appointment</button>
     `
     apptsContainer.append(myApptForm)
