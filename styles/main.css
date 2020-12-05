@@ -89,7 +89,7 @@ section#mods {
   /* background: url("../images/scheduling.svg") no-repeat center center/cover; */
 }
 section#lookbook {
-  background-color: lightgreen;
+  background-color: rgb(20, 20, 20);
   /* background: url("../images/lookbook.jpg") no-repeat center center/cover; */
 }
 section#my-appointments {
@@ -258,4 +258,20 @@ button#update-appt {
 
 p#abt-page-description {
   width: 60%;
+}
+
+/************ LOOKBOOK ***********/
+
+#lookbook-div {
+  overflow: scroll;
+  display: flex;
+  /* flex-wrap: wrap; */
+  padding: 1rem 1.5rem;
+  width: 100%;
+  height: 70%;
+  /* border: 10px solid white; */
+}
+
+img.lookbook-img {
+  padding: 15px;
 }
