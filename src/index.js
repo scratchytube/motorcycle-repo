@@ -67,7 +67,7 @@ const appointmentSubmission = event => {
     day: form.querySelector('#day').value,
     time: form.querySelector('#time-input').value,
     // increment motorcycle_id + 1 and stop when it hits 10
-    motorcycle_id: 21 // ids now start at 21..
+    motorcycle_id: 1 // ids now start at 31..
     // motorcycle_id: form.querySelector('#make').value
   }
   // console.log(modObj)
