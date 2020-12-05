@@ -8,6 +8,7 @@ const closeBtn = document.querySelector(".close-button")
 const apptsContainer = document.querySelector('#user-appts-div')
 const lookbookDiv = document.querySelector("#lookbook-div")
 
+
 const renderAllMotorcycles = cycleObj => {
   cycleObj.forEach(bike => {
     const img = document.createElement('img')
@@ -86,16 +87,21 @@ const accountSubmit = event => {
   event.preventDefault()
 
   const user = username.value
-  // console.log(username)
-  // username.value = document.querySelector("#acct-text")
   acctBtn.textContent = `Hi ${user}!`
 
   const modalClass = document.querySelector('.modal-content')
   // const closeBtn = modalCLass.querySelector('.span')
   //closeBtn.addEventListener('')
+  
+  // modelClass.style.visibility = 'hidden'
 
   
   event.target.reset()
+}
+
+const closeWindow = () => {
+  const modalClass = document.querySelector('.modal')
+  modalClass.style.visibility = 'hidden'
 }
 
 const deleteAppt = event => {
@@ -115,6 +121,7 @@ const deleteAppt = event => {
     })
 
     form.remove()
+
   } else if (event.target.dataset.action === 'update') {
 
     const btn = event.target
