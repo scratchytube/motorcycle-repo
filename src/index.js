@@ -1,15 +1,10 @@
 /****DOM ELEMENT***/
 const bikes = document.querySelector('#motorcycle-div')
-const submitBtn = document.querySelector("#submit-btn")
 const form = document.querySelector('#appointment-form')
 const username = document.querySelector('#username')
 const accountForm = document.querySelector("#account-form")
-const modalSubmitBtn = document.querySelector("#submit-btn2")
 const acctBtn = document.querySelector("#acct-btn")
-const appointments = document.querySelector("#appointment-div")
-const updateApptBtn = document.querySelector("#update-appt")
 const closeBtn = document.querySelector(".close-button")
-const companyField = document.querySelector("#cycle-input")
 const apptsContainer = document.querySelector('#user-appts-div')
 const lookbookDiv = document.querySelector("#lookbook-div")
 
@@ -61,14 +56,11 @@ const renderLookbooks = lookbookObj => {
 
 const appointmentSubmission = event => {
   event.preventDefault()
-  // const appointmentId = form.dataset.id
-  // motorcycle_id: 2, // just hard coding it for now! How do we get the id to be dynamic here ? 
+  // motorcycle_id: 1, // just hard coding it for now! How do we get the id to be dynamic here ? 
   const modObj = {
     day: form.querySelector('#day').value,
     time: form.querySelector('#time-input').value,
-    // increment motorcycle_id + 1 and stop when it hits 10
-    motorcycle_id: 1 // ids now start at 31..
-    // motorcycle_id: form.querySelector('#make').value
+    motorcycle_id: 1 
   }
   // console.log(modObj)
 
@@ -89,16 +81,14 @@ const appointmentSubmission = event => {
   event.target.reset()
 }
 
-// fake sign in form
-// once user presses enter the 'Account text in the header should 
-// change to what the user inputs: checking for input value
+
 const accountSubmit = event => {
   event.preventDefault()
 
-  const username = accountForm.querySelector("#username").value
+  const user = username.value
   // console.log(username)
   // username.value = document.querySelector("#acct-text")
-  acctBtn.textContent = `Hi ${username}!`
+  acctBtn.textContent = `Hi ${user}!`
 
   const modalClass = document.querySelector('.modal-content')
   // const closeBtn = modalCLass.querySelector('.span')
@@ -108,7 +98,6 @@ const accountSubmit = event => {
   event.target.reset()
 }
 
-// DELETE FUNCTION HERE //
 const deleteAppt = event => {
   
   if (event.target.matches('.close-button')) {
@@ -157,8 +146,6 @@ const deleteAppt = event => {
 form.addEventListener('submit', appointmentSubmission)
 accountForm.addEventListener('submit', accountSubmit)
 apptsContainer.addEventListener('click', deleteAppt)
-
-
 
 
 /****FETCH***/

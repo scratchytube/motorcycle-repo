@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Nerko One';
+  font-size: 20px;
   background: #333;
   color: #fff;
   line-height: 1.6;
@@ -47,6 +48,7 @@ body {
 }
 
 .navbar ul li a {
+  font-size: 18px;
   padding: 10px;
   margin: 0 5px;
   text-decoration: none;
@@ -103,6 +105,11 @@ section#about {
   /* background: url("../images/about_section.png") no-repeat center center/cover; */
 }
 
+p#abt-page-description {
+  font-weight: 100;
+  font-size: 30px;
+}
+
 div#motorcycle-div {
   width: 1700px;
   overflow: scroll;
@@ -136,7 +143,7 @@ select {
 
 input[type=text], [type=password] {
   padding: 10px;
-  margin:10px 0;
+  margin: 10px 0;
   border:0;
   box-shadow:0 0 15px 4px rgba(0, 0, 0, 0.06);
   border-radius:10px;
@@ -223,7 +230,7 @@ button#update-appt {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  padding: 1rem 1.5rem;
+  padding: 1.2rem 1.5rem 1.3rem;
   width: 30rem;
   border-radius: 0.5rem;
 }
@@ -269,6 +276,7 @@ p#abt-page-description {
 /************ LOOKBOOK ***********/
 
 #lookbook-div {
+  overflow: hidden;
   overflow: scroll;
   display: flex;
   /* flex-wrap: wrap; */
@@ -288,4 +296,5 @@ img#acct_img {
   margin: auto;
   /* padding: 20px; */
   display: flex;
+  padding-bottom: 30px;
 }
