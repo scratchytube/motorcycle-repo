@@ -86,21 +86,10 @@ const appointmentSubmission = event => {
 const accountSubmit = event => {
   event.preventDefault()
 
-  const username = accountForm.querySelector("#username").value
-  acctBtn.textContent = `Hi ${username}!`
   const user = username.value
   acctBtn.textContent = `Hi ${user}!`
 
-  const modalClass = document.querySelector('.modal-content')
-  // const closeBtn = modalCLass.querySelector('.span')
-  //closeBtn.addEventListener('')
-  
-  // modelClass.style.visibility = 'hidden'
-
   event.target.reset()
-  
- 
-  
 }
 
 const closeWindow = () => {
