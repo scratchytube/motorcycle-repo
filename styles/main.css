@@ -109,6 +109,7 @@ div#motorcycle-div {
 }
 
 img.img-bikes {
+  padding-top: 30px;
   height: 100%;
   width: 100%;
   scroll-snap-align: center;
@@ -253,4 +254,8 @@ button#update-appt {
   width: 850px;
   overflow: scroll;
   height: 70%;
+}
+
+p#abt-page-description {
+  width: 60%;
 }

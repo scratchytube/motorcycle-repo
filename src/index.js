@@ -14,15 +14,6 @@ const companyField = document.querySelector("#cycle-input")
 const apptsContainer = document.querySelector('#user-appts-div')
 
 
-// const renderLookbook = looksArray => {
-//   looksArray.forEach(look => {
-//     const img = document.createElement('img')
-//     img.src = look.img
-//     // img.className = 'img-bikes'
-//     img.alt = look.name 
-//   })
-// }
-
 const renderAllMotorcycles = cycleObj => {
   cycleObj.forEach(bike => {
     const img = document.createElement('img')
@@ -42,7 +33,7 @@ const renderAppointments = (apptObj) => {
     myApptForm.dataset.id = appt.id
     myApptForm.innerHTML = `
       <br><br><br>
-      <span class="close-button">x</span>
+      <span dataset-id = ${appt.id} class="close-button">x</span>
       <label for="">Date of appointment: </label>
       <input id="my-appt-date" type="text" placeholder="${appt.day} ${appt.time}">
       <label for="">Company: </label>
@@ -54,6 +45,7 @@ const renderAppointments = (apptObj) => {
 }
 
 //-----------------------------------//
+
 const appointmentSubmission = event => {
   event.preventDefault()
   // const appointmentId = form.dataset.id
@@ -62,7 +54,8 @@ const appointmentSubmission = event => {
     day: form.querySelector('#day').value,
     time: form.querySelector('#time-input').value,
     // increment motorcycle_id + 1 and stop when it hits 10
-    motorcycle_id: form.querySelector('#make').value
+    motorcycle_id: 4
+    // motorcycle_id: form.querySelector('#make').value
   }
   // console.log(modObj)
 
@@ -98,31 +91,32 @@ const accountSubmit = event => {
 }
 
 // DELETE FUNCTION HERE //
-// const deleteAppt = event => {
-//   console.log(event.target)
+const deleteAppt = event => {
+  console.log(event.target)
 
-//   id = event.target.dataset.id
-//   const form = event.target.closest('form')
+  id = event.target.dataset.id
+  console.log(id)
 
-//   fetch(`http://localhost:3000/api/v1/modification_requests/${id}`, {
-//     method: 'DELETE',
-//   })
-//   form.remove()
-// }
+  const form = event.target.closest('form')
+
+  if (event.target.className === 'close-button') {
+    form.remove()
+  }
+
+  fetch(`http://localhost:3000/api/v1/modification_requests/${id}`, {
+    method: 'DELETE',
+  })
+}
 
 /****EVENTS***/
 form.addEventListener('submit', appointmentSubmission)
 accountForm.addEventListener('submit', accountSubmit)
-// myApptForm.addEventListener('click', deleteAppt)
+apptsContainer.addEventListener('click', deleteAppt)
+
+
+
 
 /****FETCH***/
-
-// const getLookbook = () => {
-//   fetch('http://localhost:3000/api/v1/lookbooks')
-//   .then(r => r.json())
-//   .then(renderLookbook)
-// }
-
 const getMotorcycles = () => {
   fetch('http://localhost:3000/api/v1/motorcycles')
   .then(r => r.json())
