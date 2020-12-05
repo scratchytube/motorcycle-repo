@@ -86,6 +86,8 @@ const appointmentSubmission = event => {
 const accountSubmit = event => {
   event.preventDefault()
 
+  const username = accountForm.querySelector("#username").value
+  acctBtn.textContent = `Hi ${username}!`
   const user = username.value
   acctBtn.textContent = `Hi ${user}!`
 
@@ -95,8 +97,10 @@ const accountSubmit = event => {
   
   // modelClass.style.visibility = 'hidden'
 
-  
   event.target.reset()
+  
+ 
+  
 }
 
 const closeWindow = () => {
@@ -153,6 +157,9 @@ const deleteAppt = event => {
 form.addEventListener('submit', appointmentSubmission)
 accountForm.addEventListener('submit', accountSubmit)
 apptsContainer.addEventListener('click', deleteAppt)
+// accountForm.submit = event => {
+//   accountForm.hide()
+// }
 
 
 /****FETCH***/
