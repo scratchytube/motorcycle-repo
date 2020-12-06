@@ -14,3 +14,20 @@ for (let [index, trigger] of triggerArray) {
   trigger.addEventListener("click", toggleModal);
   closeButtons[triggerIndex].addEventListener("click", toggleModal);
 }
+
+const closeWindow = () => {
+  const modalClass = document.querySelector('.modal')
+  modalClass.style.visibility = 'hidden'
+}
+
+const hideModalContent = () => {
+  const modalCont = document.querySelector("#account-form")
+  modalCont.style.display = 'none'
+}
+
+const displayModalContent = () => {
+  const modalDisplay = document.querySelector("#account-form")
+  const hideUserOptions = document.querySelector("#signup-signin-div")
+  hideUserOptions.style.display = 'none'
+  modalDisplay.style.display = 'initial'
+}

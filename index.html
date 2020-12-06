@@ -26,13 +26,14 @@
         <div id="account" class="modal">
           <div class="modal-content">
             <span class="close-button">x</span>
-            <!-- sign in and sign up buttons here -->
-            <img id="acct_img" src="./images/m_f_user_img.jpg" alt="user_img">
-            <button id="signup">Sign Up</button>
-            <button id="signin"> Sign In</button>
-            <!-- form needs to be hidden and then displayed upon either button clicks above -->
-
-            <!-- form needs to be hidden on account btn click-->
+            <!-- user sign-up-->
+            <div id="signup-signin-div">
+              <img id="acct_img" src="./images/m_f_user_img.jpg" alt="user_img">
+              <button id="signup" onclick="displayModalContent()">Sign Up</button>
+              <button id="signin" onclick="displayModalContent()"> Sign In</button>
+            </div>
+            <!-- form needs to be displayed upon either button clicks above -->
+            <!-- after button click sign up / sign in section also needs to be hidden -->
             <form id="account-form" >
               <img id="acct_img" src="./images/m_f_user_img.jpg" alt="user_img">
               <label class="modal-label" for="username">Username: </label>

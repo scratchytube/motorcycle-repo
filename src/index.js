@@ -90,16 +90,6 @@ const accountSubmit = event => {
   event.target.reset()
 }
 
-const closeWindow = () => {
-  const modalClass = document.querySelector('.modal')
-  modalClass.style.visibility = 'hidden'
-}
-
-const hideModalContent = () => {
-  const modalCont = document.querySelector("#account-form")
-  modalCont.style.display = 'none'
-}
-
 const patchAppt = event => {
   
   if (event.target.matches('.close-button')) {
