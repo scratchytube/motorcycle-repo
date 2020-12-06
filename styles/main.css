@@ -180,7 +180,7 @@ button#submit-btn {
   width: 50%;
 }
 
-button#submit-btn2 {
+button#modal-submit {
   /* remove default behavior */
   appearance:none;
   -webkit-appearance:none;
@@ -195,13 +195,13 @@ button#submit-btn2 {
   width: 50%;
   margin-top: 10px;
   margin-left: 100px;
+  margin-bottom: 20px;
 }
 
 button#signup {
   /* remove default behavior */
   appearance:none;
   -webkit-appearance:none;
-
   padding: 10px;
   border: none;
   background-color:#5c5b5b;
@@ -212,6 +212,7 @@ button#signup {
   width: 50%;
   margin-top: 10px;
   margin-left: 100px;
+  margin-bottom: 30px;
 }
 
 button#signin {
@@ -229,6 +230,7 @@ button#signin {
   width: 50%;
   margin-top: 10px;
   margin-left: 100px;
+  margin-bottom: 20px;
 }
 
 button#update-appt {
@@ -296,6 +298,10 @@ button#update-appt {
 .modal-label {
   font-family: bignoodletitling;
   color: black;
+}
+
+#username, #password {
+  margin-bottom: 40px;
 }
 
 /********** MY APPOINTMENTS **********/
