@@ -22,10 +22,17 @@
         <li><a href="#my-appointments">My Appointments</a></li>
         <li><a href="#about">About Us</a></li>
         <!-- modal -->
-        <li><a id="acct-btn" href="#account" class="trigger">Account</a></li>
+        <li><a id="acct-btn" href="#account" class="trigger" onclick="hideModalContent()">Account</a></li>
         <div id="account" class="modal">
           <div class="modal-content">
             <span class="close-button">x</span>
+            <!-- sign in and sign up buttons here -->
+            <img id="acct_img" src="./images/m_f_user_img.jpg" alt="user_img">
+            <button id="signup">Sign Up</button>
+            <button id="signin"> Sign In</button>
+            <!-- form needs to be hidden and then displayed upon either button clicks above -->
+
+            <!-- form needs to be hidden on account btn click-->
             <form id="account-form" >
               <img id="acct_img" src="./images/m_f_user_img.jpg" alt="user_img">
               <label class="modal-label" for="username">Username: </label>
@@ -67,7 +74,7 @@
             
           <label for='time'>Time: </label>
           <input id="time-input" type="text" placeholder="Enter time of appointment"><br>
-
+            <!-- what bike do you have that you want us to modify / or a viewing on what motorcycle you want to come in and view -->
           <label for='make'>Make of motorcycle: </label>
             <select name="make" id="make">
               <option>Kawasaki</option>
@@ -82,7 +89,7 @@
               <option>BMW</option>
             </select>
             <br><br>
-          <textarea placeholder="What would you like to modify? " id='description'></textarea>
+          <textarea placeholder="Tell us a bit about your motorcycle and what you're looking to modify" id='description'></textarea>
 
           <br><br>
           <button id="submit-btn" type="submit">Submit</button>
@@ -108,9 +115,9 @@
     <section id="about">
       <h1>ABOUT</h1>
       <p id='abt-page-description'>Just two dudes from New York who share a love of motorcycles. Upon meeting at a coding bootcamp, Shevaughn Grant and Brian Sahota
-        realized they had passions outside of coding. Upon graduation they started a custom motorcycle shop and their builds have been featured
-        in motorcycle magazines and movies. Most notably the Batman franchise. Yes they did the BatBike. Drop us a line and set up an
-        appointment!
+        realized they had passions outside of coding and upon graduation they started a custom motorcycle shop. Their builds have been featured
+        in motorcycle magazines and movies across the world. They even scored the contract to manufacture the BatBike for Batman. Cycle Heaven loves unique projects and are looking for new clients to work with currently. Drop us a line and set up an
+        appointment or just say hi!
       </p>
     </section>
   </div> 

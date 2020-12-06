@@ -76,9 +76,7 @@ const appointmentSubmission = event => {
     .then(r => r.json())
     .then(data => {
       console.log('Success:', data)
-      // renderAppointments(data)
     })
-  
   event.target.reset()
 }
 
@@ -97,7 +95,12 @@ const closeWindow = () => {
   modalClass.style.visibility = 'hidden'
 }
 
-const deleteAppt = event => {
+const hideModalContent = () => {
+  const modalCont = document.querySelector("#account-form")
+  modalCont.style.display = 'none'
+}
+
+const patchAppt = event => {
   
   if (event.target.matches('.close-button')) {
     
@@ -145,7 +148,7 @@ const deleteAppt = event => {
 /****EVENTS***/
 form.addEventListener('submit', appointmentSubmission)
 accountForm.addEventListener('submit', accountSubmit)
-apptsContainer.addEventListener('click', deleteAppt)
+apptsContainer.addEventListener('click', patchAppt)
 // accountForm.submit = event => {
 //   accountForm.hide()
 // }
