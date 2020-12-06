@@ -20,9 +20,9 @@ const closeWindow = () => {
   modalClass.style.visibility = 'hidden'
 }
 
-const hideModalContent = () => {
-  const modalCont = document.querySelector("#account-form")
-  modalCont.style.display = 'none'
+const hideAccForm = () => {
+  const accForm = document.querySelector("#account-form")
+  accForm.style.display = 'none'
 }
 
 const displayModalContent = () => {
