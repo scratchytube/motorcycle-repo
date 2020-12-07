@@ -22,8 +22,12 @@ const renderAllMotorcycles = cycleObj => {
 }
 
 
+
 const renderAppointments = apptObj => {
-  apptObj.forEach(appt => {
+  apptObj.forEach(renderOneAppt)
+}
+    
+    const renderOneAppt = appt => {
     const myApptForm = document.createElement('form')
     myApptForm.className = 'myappts'
     myApptForm.dataset.id = appt.id
@@ -38,8 +42,8 @@ const renderAppointments = apptObj => {
       <button data-action="update" id="update-appt">Update Appointment</button>
     `
     apptsContainer.append(myApptForm)
-  })
-}
+  }
+
 
 const renderLookbooks = lookbookObj => {
   lookbookObj.forEach(lookbook => {
@@ -74,10 +78,9 @@ const appointmentSubmission = event => {
     body: JSON.stringify(modObj)
     })
     .then(r => r.json())
-    .then(data => {
-      console.log('Success:', data)
-    })
-  event.target.reset()
+    .then(renderOneAppt)
+    
+    event.target.reset()
 }
 
 
