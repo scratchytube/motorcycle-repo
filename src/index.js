@@ -18,31 +18,41 @@ const renderAllMotorcycles = cycleObj => {
     img.alt = `${bike.maker} ${bike.name}`
     form.dataset.id = bike.id
     bikes.append(img)
+
+    /* Adding an eventlistener to the images for an appt just in case
+
+    img.addEventListener("click", () => {
+      (fetch)bike.id 
+    }
+    
+    */
   })
 }
 
 
-
+// ModalCntent
 const renderAppointments = apptObj => {
   apptObj.forEach(renderOneAppt)
 }
-    
-    const renderOneAppt = appt => {
-    const myApptForm = document.createElement('form')
-    myApptForm.className = 'myappts'
-    myApptForm.dataset.id = appt.id
-    myApptForm.innerHTML = `
-      <br><br><br>
-      <span data-id=${appt.id} class="close-button">x</span>
-      <label for="">Company: </label>
-      <input id="cycle-input" type="text" placeholder="Cycle Heaven" disabled><br>
-      <label for="">Date of appointment: </label>
-      <input id="my-appt-day" type="text" placeholder="${appt.day}">
-      <input id="my-appt-time" type="text" placeholder="${appt.time}">
-      <button data-action="update" id="update-appt">Update Appointment</button>
-    `
-    apptsContainer.append(myApptForm)
-  }
+
+const renderOneAppt = appt => {
+  const myApptForm = document.createElement('form')
+  myApptForm.className = 'myappts'
+  myApptForm.dataset.id = appt.id
+  myApptForm.innerHTML = `
+    <br><br><br>
+    <span data-id=${appt.id} class="close-button">x</span>
+    <label for="">Company: </label>
+    <input id="cycle-input" type="text" placeholder="Cycle Heaven" disabled><br>
+    <label for="">Date of appointment: </label>
+    <input id="my-appt-day" type="text" placeholder="${appt.day}">
+    <input id="my-appt-time" type="text" placeholder="${appt.time}">
+    <label for="">Description: </label>
+    <textarea id="desc" placeholder="${appt.description}"></textarea>
+    <button data-action="update" id="update-appt">Update Appointment</button>
+  `
+  apptsContainer.append(myApptForm)
+}
 
 
 const renderLookbooks = lookbookObj => {
@@ -65,6 +75,7 @@ const appointmentSubmission = event => {
   const modObj = {
     day: form.querySelector('#day').value,
     time: form.querySelector('#time-input').value,
+    description: form.querySelector('#description').value,
     motorcycle_id: 1 
   }
   // console.log(modObj)
@@ -118,10 +129,12 @@ const patchAppt = event => {
     const id = form.dataset.id
     const apptDay = form.querySelector("#my-appt-day");
     const apptTime = form.querySelector("#my-appt-time");
+    const desc = form.querySelector('#desc')
 
     const apptDateObj = {
       day: apptDay.value,
-      time: apptTime.value
+      time: apptTime.value,
+      description: desc.value
     }
     console.log(apptDateObj)
     // debugger
