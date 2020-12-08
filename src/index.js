@@ -45,10 +45,10 @@ const renderOneAppt = appt => {
     <label for="">Company: </label>
     <input id="cycle-input" type="text" placeholder="Cycle Heaven" disabled><br>
     <label for="">Date of appointment: </label>
-    <input id="my-appt-day" type="text" placeholder="${appt.day}">
-    <input id="my-appt-time" type="text" placeholder="${appt.time}">
+    <input id="my-appt-day" type="text" placeholder="" value="${appt.day}">
+    <input id="my-appt-time" type="text" placeholder="" value="${appt.time}">
     <label for="">Description: </label>
-    <textarea id="desc" placeholder="${appt.description}"></textarea>
+    <textarea id="desc" placeholder="">${appt.description}</textarea>
     <button data-action="update" id="update-appt">Update Appointment</button>
   `
   apptsContainer.append(myApptForm)

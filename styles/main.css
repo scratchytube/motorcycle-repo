@@ -330,8 +330,8 @@ p#abt-page-description {
 
 #lookbook-div {
   overflow: hidden;
-  overflow: scroll;
   display: flex;
+  overflow: scroll;
   /* flex-wrap: wrap; */
   padding: 1rem 1.5rem;
   width: 100%;
